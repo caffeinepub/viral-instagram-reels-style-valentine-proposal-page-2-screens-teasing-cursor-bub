@@ -1,0 +1,167 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Valentine reels-style 2-screen proposal (hearts, teasing bubbles, fade + burst)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update Page 1 copy/layout to centered “❤️ NANDHANA❤️” + “Will you be my Valentine? 💖” on soft pink gradient with continuous floating hearts behind.",
+      "acceptanceCriteria": [
+        "Page 1 shows exactly the centered title \"❤️ NANDHANA❤️\" and subtitle \"Will you be my Valentine? 💖\".",
+        "Background is a soft pink gradient and floating hearts are visible behind the content.",
+        "Layout remains mobile-friendly (content is centered and readable on small screens)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/QuestionScreen.tsx",
+          "operation": "modify",
+          "description": "Update Page 1 title text to exactly “❤️ NANDHANA❤️”, ensure subtitle matches exactly, and keep centered mobile-friendly spacing/typography."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Confirm/adjust the existing soft pink gradient background wrapper so Page 1 content stays centered with floating hearts clearly behind the content (keep FloatingHearts behind via stacking context)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Ensure Page 1 has only a single primary “Yes! 💕” CTA and no “No” button; teasing bubbles must never block clicking the Yes button.",
+      "acceptanceCriteria": [
+        "Only one primary button is present: \"Yes! 💕\".",
+        "No \"No\" button is rendered anywhere.",
+        "Teasing messages never block pointer interaction with the Yes button (Yes remains clickable at all times)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/QuestionScreen.tsx",
+          "operation": "modify",
+          "description": "Ensure only one CTA button is rendered (\"Yes! 💕\"), remove/avoid any secondary CTA, and keep the button visually prominent and easy to tap/click. Use the shadcn-ui Button component for the CTA; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/TeasingMessage.tsx",
+          "operation": "modify",
+          "description": "Maintain/verify pointer-events behavior so teasing bubbles never intercept clicks/taps intended for the Yes button (bubbles must remain non-interactive)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement viral-style teasing chat bubbles: one-at-a-time near cursor on idle or on clicks elsewhere, random message + slight random rotation, smooth enter/exit, chat-bubble styling.",
+      "acceptanceCriteria": [
+        "When the user clicks/taps anywhere except the Yes button, a single teasing bubble appears near the click/tap location.",
+        "When the user is idle/hesitating (no interaction for a short period), a single teasing bubble appears near the current cursor position (or near the center on touch-only devices).",
+        "At most one teasing bubble is visible at a time (new bubble replaces the previous rather than stacking).",
+        "Bubble text is randomly selected from the provided list and each appearance uses a random small rotation angle.",
+        "Teasing bubbles have a chat-bubble look (rounded bubble styling) and animate in/out smoothly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/QuestionScreen.tsx",
+          "operation": "modify",
+          "description": "Refactor teasing message logic to a single visible bubble at a time; add cursor/touch position tracking; trigger bubble on background click/tap (excluding the Yes button) and also via an idle timer that uses last known cursor position (or center for touch-only). Randomize message selection and rotation per appearance."
+        },
+        {
+          "path": "frontend/src/components/TeasingMessage.tsx",
+          "operation": "modify",
+          "description": "Update TeasingMessage to support chat-bubble styling and smooth enter/exit animation, and accept a rotation value (applied as a small random tilt) while keeping pointer-events disabled."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust global keyframes/utility classes for teasing bubble enter/exit motion (smooth pop/slide + fade), ensuring the animation supports a rotated bubble without jitter."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "On “Yes! 💕” click, transition Page 1 to Page 2 using a soft fade plus a heart-burst effect.",
+      "acceptanceCriteria": [
+        "Clicking \"Yes! 💕\" triggers a soft fade transition between screens.",
+        "A visible heart-burst animation plays during the transition to Page 2.",
+        "Transition feels smooth on mobile and desktop (no abrupt content jump)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ValentineScreen.tsx",
+          "operation": "modify",
+          "description": "Implement a transition state so clicking “Yes! 💕” first plays a soft fade and shows a heart-burst overlay, then switches to Page 2 content after the transition completes (avoid abrupt swap)."
+        },
+        {
+          "path": "frontend/src/components/HeartBurst.tsx",
+          "operation": "modify",
+          "description": "Ensure HeartBurst can be used as a transition overlay (timing/z-index aligns with the fade) without interfering with user interaction."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust fade transition animations/classes used by the Page 1 → Page 2 swap (soft fade that remains smooth on mobile and desktop)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Page 2 celebration layout and exact copy, including rounded photo frame with silhouette placeholder image and footer text.",
+      "acceptanceCriteria": [
+        "Page 2 displays exactly the requested headline and subheadline text.",
+        "A rounded photo frame is visible and contains the romantic couple silhouette placeholder image.",
+        "The caption text under the image is exactly: \"You've made me the happiest! 💖\".",
+        "Footer shows: \"© 2025 · Built with ❤️ using caffeine.ai\" in small text.",
+        "Page 2 remains mobile-friendly (image and text scale appropriately)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CelebrationScreen.tsx",
+          "operation": "modify",
+          "description": "Ensure Page 2 renders the exact requested headline/subheadline/caption strings and uses a rounded photo frame containing the placeholder image; adjust the footer to render exactly “© 2025 · Built with ❤️ using caffeine.ai” as plain text (no additional link markup)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Polish overall romantic/cute reel-like motion and responsiveness across both screens (hearts, fades, bubble animations, burst).",
+      "acceptanceCriteria": [
+        "Animations (floating hearts, teasing bubbles, screen transition, heart burst) are smooth and cohesive.",
+        "UI is usable on touch devices (tap interactions work; content fits without horizontal scroll).",
+        "Overall look stays within a romantic/cute aesthetic (soft pink palette, rounded shapes, gentle motion)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FloatingHearts.tsx",
+          "operation": "modify",
+          "description": "Tune floating hearts density/opacity/speed variance (if needed) so the motion feels continuous and subtle behind content without reducing readability."
+        },
+        {
+          "path": "frontend/src/components/QuestionScreen.tsx",
+          "operation": "modify",
+          "description": "Confirm responsive/touch-friendly layout: centered text, adequate padding, and large tappable Yes button; ensure teasing bubble triggers feel natural on both mouse and touch devices."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Harmonize animation timings/easings across hearts, bubbles, fade transition, and burst for a cohesive reel-like feel; ensure no horizontal overflow is introduced by animations."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add the required static placeholder image asset and reference it via the public assets path so it displays in Page 2.",
+      "acceptanceCriteria": [
+        "A generated image file exists at frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png.",
+        "Page 2 loads and displays this image correctly (no broken image link)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png",
+          "operation": "create",
+          "description": "Add the generated placeholder image asset at the exact required path: frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png."
+        },
+        {
+          "path": "frontend/src/components/CelebrationScreen.tsx",
+          "operation": "modify",
+          "description": "Verify the image reference uses the public assets path and matches the exact filename: frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png."
+        }
+      ]
+    }
+  ]
+}

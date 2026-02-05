@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a viral, Instagram-reels-style interactive Valentine proposal web page with two screens: an initial question screen with playful cursor-following chat bubbles and a second celebration screen after clicking Yes, featuring smooth romantic animations and mobile-friendly design.",
+  "architectural_notes": [
+    "Two-page interactive web flow: initial question screen (no No button) and post-Yes celebration screen with animated transition.",
+    "UX behavior: playful rotating chat-bubble messages appear near cursor on hesitation or off-button clicks; keep Yes button prominent/clickable.",
+    "Visual design: soft pink gradient background, floating hearts animation, smooth fade + hearts burst transition, mobile-first layout."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Romantic couple silhouette placeholder image, simple high-contrast silhouette on a soft romantic background (romantic-silhouette-placeholder.dim_300x300.png)",
+  "existing_features": [
+    {
+      "id": "feature-update-the-main-question-screen-page-1-copy-and-layout-to-match-title-text-nandhana-and-subtitle-will-you-be-my-valentine-centered-on-a-soft-pink-gradient-background-with-continuous-floating-heart-animations",
+      "title": "Update the main question screen (Page 1) copy and layout to match: title text \"❤️ NANDHANA❤️\" and subtitle \"Will you be my Valentine? 💖\", centered on a soft pink gradient background with continuous floating heart animations.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-page-1-interaction-so-there-is-no-no-button-and-the-only-visible-cta-is-a-main-pink-button-labeled-yes-that-remains-attractive-and-easy-to-click-not-obstructed-by-teasing-bubbles",
+      "title": "Implement the Page 1 interaction so there is no \"No\" button and the only visible CTA is a main pink button labeled \"Yes! 💕\" that remains attractive and easy to click (not obstructed by teasing bubbles).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-teasing-message-behavior-on-page-1-to-feel-like-viral-reels-show-chat-style-floating-bubbles-that-appear-one-at-a-time-near-the-cursor-when-the-user-hesitates-idle-or-clicks-taps-elsewhere-each-bubble-uses-one-of-the-provided-messages-chosen-randomly-and-appears-with-a-playful-random-rotation-and-smooth-enter-exit-animation",
+      "title": "Revise the teasing message behavior on Page 1 to feel like viral reels: show chat-style floating bubbles that appear one at a time near the cursor when the user hesitates (idle) or clicks/taps elsewhere; each bubble uses one of the provided messages, chosen randomly, and appears with a playful random rotation and smooth enter/exit animation.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-on-clicking-yes-transition-from-page-1-to-page-2-with-a-soft-fade-plus-a-heart-burst-effect",
+      "title": "On clicking \"Yes! 💕\", transition from Page 1 to Page 2 with a soft fade plus a heart-burst effect.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-page-2-content-to-match-the-requested-celebration-layout-and-copy-show-yay-and-i-knew-you-d-say-yes-then-a-rounded-photo-frame-containing-a-romantic-couple-silhouette-placeholder-image-followed-by-the-text-you-ve-made-me-the-happiest-include-the-footer-text-2025-built-with-using-caffeine-ai",
+      "title": "Build Page 2 content to match the requested celebration layout and copy: show \"🎉 Yay! 🎉\" and \"I knew you'd say yes! 💞\", then a rounded photo frame containing a romantic couple silhouette placeholder image, followed by the text \"You've made me the happiest! 💖\"; include the footer text \"© 2025 · Built with ❤️ using caffeine.ai\".",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-overall-visual-style-is-consistently-romantic-cute-and-smooth-with-reel-like-motion-polish-hearts-fades-bubble-animations-while-keeping-the-experience-responsive-and-touch-friendly",
+      "title": "Ensure the overall visual style is consistently romantic, cute, and smooth with reel-like motion polish (hearts, fades, bubble animations), while keeping the experience responsive and touch-friendly.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-static-placeholder-image-asset-and-reference-it-from-the-frontend-via-the-public-assets-path-so-it-renders-in-page-2-s-rounded-photo-frame",
+      "title": "Add the required static placeholder image asset and reference it from the frontend via the public assets path so it renders in Page 2’s rounded photo frame.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a 2-page viral Valentine proposal webpage: Page 1 soft pink gradient with floating hearts, centered \"❤️ NANDHANA❤️ Will you be my Valentine? 💖\" and a single \"Yes! 💕\" button; show rotating teasing chat-bubble messages near cursor on hesitation/clicks elsewhere (no real No button). Page 2 appears on Yes with fade + hearts burst transition, celebratory text, rounded placeholder couple silhouette photo frame, follow-up text, and footer © 2025 · Built with ❤️ using caffeine.ai; romantic/cute/smooth animations; mobile-friendly.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Viral Instagram-reels-style Valentine proposal page (2 screens, teasing cursor bubbles, hearts + celebration)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

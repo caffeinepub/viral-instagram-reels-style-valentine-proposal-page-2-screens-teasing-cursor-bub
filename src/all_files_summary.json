@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Structured feature-evidence report mapping features to affected frontend files and components.",
+  "frontend-file-summaries.txt": "Text file listing short descriptions of each frontend source file for reference.",
+  "frontend/index.css": "Tailwind base and theme variable definitions using OKLCH pink palette with light and dark modes.",
+  "frontend/index.html": "Basic HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Top-level app component applying light theme and rendering floating hearts and the Valentine screen.",
+  "frontend/src/components/CelebrationScreen.tsx": "Page 2 UI showing celebration text, a rounded romantic image, and footer.",
+  "frontend/src/components/FloatingHearts.tsx": "Generates randomized floating heart emojis that animate upward in the background.",
+  "frontend/src/components/HeartBurst.tsx": "Produces a circular burst of animated hearts for the page transition effect.",
+  "frontend/src/components/QuestionScreen.tsx": "Main question screen with 'Yes' button and logic for cursor‑based or idle teasing message bubbles.",
+  "frontend/src/components/TeasingMessage.tsx": "Renders a single animated teasing chat bubble at a specified position and rotation.",
+  "frontend/src/hooks/useActor.ts": "React hook creating an authenticated or anonymous backend actor and invalidating dependent queries on change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity provider and hook managing authentication state, login, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file since no backend queries are required.",
+  "frontend/src/index.css": "Defines Tailwind base layers, custom OKLCH color variables, and several keyframe animations with utility classes.",
+  "frontend/src/main.tsx": "Bootstraps the React app with QueryClientProvider and InternetIdentityProvider, then renders App with global styles.",
+  "frontend/src/pages/ValentineScreen.tsx": "Controls the two-screen Valentine flow, handling acceptance state and running a fade-plus-heart-burst transition.",
+  "frontend/tailwind.config.js": "Extends Tailwind with custom OKLCH colors, radii, shadows, and animations, and registers plugins like typography and container queries.",
+  "project_state.json": "Contains the project’s metadata, requirements, feature descriptions, and design guidance for the interactive Valentine experience."
+}

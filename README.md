@@ -1,2 +1,3 @@
-# viral-instagram-reels-style-valentine-proposal-page-2-screens-teasing-cursor-bub
-Exported from Caffeine project: Viral Instagram-reels-style Valentine proposal page (2 screens, teasing cursor bubbles, hearts + celebration)
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

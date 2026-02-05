@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component with light theme provider and soft pink gradient background with floating hearts animation.",
+  "frontend/src/pages/ValentineScreen.tsx": "Container component managing state between question and celebration screens with transition animation (fade + heart burst overlay) when user accepts.",
+  "frontend/src/components/QuestionScreen.tsx": "First screen displaying Valentine question for NANDHANA with \"Yes! 💕\" button, single teasing bubble appearing on tap/click or after idle timeout (3s), with cursor tracking and random rotation.",
+  "frontend/src/components/CelebrationScreen.tsx": "Second screen showing celebration message with rounded photo frame containing romantic silhouette placeholder and footer without link.",
+  "frontend/src/components/FloatingHearts.tsx": "Background animation component that renders continuously floating heart emojis with randomized positions, sizes, and animation timings.",
+  "frontend/src/components/TeasingMessage.tsx": "Chat-style bubble component with rotation support, appearing at specified positions with smooth pop-in/fade-out animation.",
+  "frontend/src/components/HeartBurst.tsx": "Animated heart burst effect that radiates hearts outward in a circular pattern when transitioning to celebration screen.",
+  "frontend/src/index.css": "Global styles with OKLCH romantic pink color system and custom keyframe animations including teasing-bubble animation with rotation support.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens matching the soft pink romantic Valentine theme.",
+  "frontend/src/hooks/useQueries.ts": "Empty file as no backend queries are needed for this frontend-only interactive webpage."
+}
