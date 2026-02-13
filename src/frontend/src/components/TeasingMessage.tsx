@@ -12,7 +12,8 @@ export default function TeasingMessage({ text, x, y, rotation }: TeasingMessageP
       style={{
         left: `${x}px`,
         top: `${y}px`,
-        transform: `translate(-50%, -50%) rotate(${rotation}deg)`
+        transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
+        ['--rotation' as string]: `${rotation}deg`
       }}
     >
       {text}

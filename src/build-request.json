@@ -1,151 +1,67 @@
 {
   "kind": "build_request",
-  "title": "Viral Instagram-reels-style Valentine proposal page (2 screens, teasing cursor bubbles, hearts + celebration)",
+  "title": "Update Valentine reel proposal copy to RHUTHUN and align footer text exactly to spec",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Update the main question screen (Page 1) copy and layout to match: title text \"❤️ NANDHANA❤️\" and subtitle \"Will you be my Valentine? 💖\", centered on a soft pink gradient background with continuous floating heart animations.",
+      "id": "REQ-15",
+      "text": "Update Page 1 (main question screen) centered title text to exactly \"❤️ RHUTHUN❤️\" while keeping the rest of the Page 1 layout/behavior the same (soft pink gradient background, floating hearts, question text, single \"Yes! 💕\" button, and teasing bubbles behavior).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-4"
         ],
         "quotes": [
-          "PAGE 1 – MAIN QUESTION\nBackground:\n- Soft pink gradient\n- Floating heart animations\n\nCenter text:\n❤️ NANDHANA❤️\nWill you be my Valentine? 💖"
+          "Center text:\n❤️ RHUTHUN❤️\nWill you be my Valentine? 💖"
         ]
       },
       "acceptanceCriteria": [
-        "Page 1 shows exactly the centered title \"❤️ NANDHANA❤️\" and subtitle \"Will you be my Valentine? 💖\".",
-        "Background is a soft pink gradient and floating hearts are visible behind the content.",
-        "Layout remains mobile-friendly (content is centered and readable on small screens)."
+        "On Page 1, the main title renders exactly as \"❤️ RHUTHUN❤️\" (including spacing/punctuation).",
+        "Page 1 still shows the question text \"Will you be my Valentine? 💖\" and the primary button labeled \"Yes! 💕\".",
+        "Teasing bubbles still appear one-at-a-time near the cursor/tap point on idle or clicks/taps elsewhere, and do not block the Yes button."
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Implement the Page 1 interaction so there is no \"No\" button and the only visible CTA is a main pink button labeled \"Yes! 💕\" that remains attractive and easy to click (not obstructed by teasing bubbles).",
+      "id": "REQ-16",
+      "text": "Ensure Page 2 (after clicking \"Yes! 💕\") footer text matches the spec exactly as plain text: \"© 2025 · Built with ❤️ using caffeine.ai\" (no dynamic year, no link), and remove any extra footer text on Page 1 that is not specified in the request.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-4"
         ],
         "quotes": [
-          "Buttons:\n- One main pink button: \"Yes! 💕\"\n\nBehavior:\n- There is NO real No button.\n- The Yes button should stay attractive and clickable."
+          "Footer (small text):\n© 2025 · Built with ❤️ using caffeine.ai"
         ]
       },
       "acceptanceCriteria": [
-        "Only one primary button is present: \"Yes! 💕\".",
-        "No \"No\" button is rendered anywhere.",
-        "Teasing messages never block pointer interaction with the Yes button (Yes remains clickable at all times)."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Revise the teasing message behavior on Page 1 to feel like viral reels: show chat-style floating bubbles that appear one at a time near the cursor when the user hesitates (idle) or clicks/taps elsewhere; each bubble uses one of the provided messages, chosen randomly, and appears with a playful random rotation and smooth enter/exit animation.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Below the question, show playful chat-style floating bubbles that appear one by one when user hesitates or clicks elsewhere.\n\nFloating teasing messages (rotate randomly, one at a time):\n- \"Nope, not happening 🙅‍♀️\"\n- \"Still no? Really? 😂\"\n- \"You're testing my patience 😜\"\n- \"You can't escape love 💘\"\n- \"Wait… are you sure? 🥺\"\n\nBehavior:\n- Messages should appear playfully near the cursor."
-        ]
-      },
-      "acceptanceCriteria": [
-        "When the user clicks/taps anywhere except the Yes button, a single teasing bubble appears near the click/tap location.",
-        "When the user is idle/hesitating (no interaction for a short period), a single teasing bubble appears near the current cursor position (or near the center on touch-only devices).",
-        "At most one teasing bubble is visible at a time (new bubble replaces the previous rather than stacking).",
-        "Bubble text is randomly selected from the provided list and each appearance uses a random small rotation angle.",
-        "Teasing bubbles have a chat-bubble look (rounded bubble styling) and animate in/out smoothly."
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "On clicking \"Yes! 💕\", transition from Page 1 to Page 2 with a soft fade plus a heart-burst effect.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "PAGE 2 – AFTER CLICKING YES\nOn clicking \"Yes! 💕\":\n\nTransition animation (soft fade + hearts burst)"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Clicking \"Yes! 💕\" triggers a soft fade transition between screens.",
-        "A visible heart-burst animation plays during the transition to Page 2.",
-        "Transition feels smooth on mobile and desktop (no abrupt content jump)."
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Build Page 2 content to match the requested celebration layout and copy: show \"🎉 Yay! 🎉\" and \"I knew you'd say yes! 💞\", then a rounded photo frame containing a romantic couple silhouette placeholder image, followed by the text \"You've made me the happiest! 💖\"; include the footer text \"© 2025 · Built with ❤️ using caffeine.ai\".",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Show:\n🎉 Yay! 🎉\nI knew you'd say yes! 💞\n\nBelow it:\n- A rounded photo frame (romantic couple silhouette placeholder image)\n- Text under image:\n\"You've made me the happiest! 💖\"\n\nFooter (small text):\n© 2025 · Built with ❤️ using caffeine.ai"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Page 2 displays exactly the requested headline and subheadline text.",
-        "A rounded photo frame is visible and contains the romantic couple silhouette placeholder image.",
-        "The caption text under the image is exactly: \"You've made me the happiest! 💖\".",
-        "Footer shows: \"© 2025 · Built with ❤️ using caffeine.ai\" in small text.",
-        "Page 2 remains mobile-friendly (image and text scale appropriately)."
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Ensure the overall visual style is consistently romantic, cute, and smooth with reel-like motion polish (hearts, fades, bubble animations), while keeping the experience responsive and touch-friendly.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Style:\n- Romantic\n- Cute\n- Smooth animations\n- Mobile friendly\n- Exactly like viral Valentine proposal reels"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Animations (floating hearts, teasing bubbles, screen transition, heart burst) are smooth and cohesive.",
-        "UI is usable on touch devices (tap interactions work; content fits without horizontal scroll).",
-        "Overall look stays within a romantic/cute aesthetic (soft pink palette, rounded shapes, gentle motion)."
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Add the required static placeholder image asset and reference it from the frontend via the public assets path so it renders in Page 2’s rounded photo frame.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "- A rounded photo frame (romantic couple silhouette placeholder image)"
-        ]
-      },
-      "acceptanceCriteria": [
-        "A generated image file exists at frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png.",
-        "Page 2 loads and displays this image correctly (no broken image link)."
+        "On Page 2, the footer displays exactly: \"© 2025 · Built with ❤️ using caffeine.ai\".",
+        "The Page 2 footer is not a hyperlink and does not display any other attribution text.",
+        "Page 1 does not display any footer text that is not specified in the user request."
       ]
     }
   ],
   "constraints": [
-    "Frontend files under frontend/src/components/ui and the immutable hook/bootstrap paths must not be edited directly.",
-    "Do not add or rely on non-Internet-Computer backend services (no external databases or third-party auth)."
+    "Frontend files under frontend/src/components/ui must not be edited (compose them only).",
+    "Do not edit any paths listed in SYSTEM_CONTEXT.frontend.immutablePaths.",
+    "Keep backend as a single Motoko actor; do not introduce additional canisters or external services."
   ],
   "nonGoals": [
-    "Adding Internet Identity login or any user accounts (not requested).",
-    "Persisting acceptance state to the backend or supporting multi-user storage (not requested).",
-    "Adding additional pages beyond the two screens described."
+    "Adding new pages beyond the 2-screen flow.",
+    "Adding authentication or backend state (the backend can remain unused).",
+    "Changing the teasing message list, bubble animation style, or Yes transition animation beyond what is necessary to meet the specified copy/footer text."
   ],
   "imageRequirements": {
-    "required": [
-      "Romantic couple silhouette placeholder image, simple high-contrast silhouette on a soft romantic background (romantic-silhouette-placeholder.dim_300x300.png)"
-    ],
+    "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

@@ -1,104 +1,34 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-05T15:57:33.150Z",
+  "generatedAt": "2026-02-13T14:33:35.909Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 7,
-    "implemented": 7,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Update the main question screen (Page 1) copy and layout to match: title text \"❤️ NANDHANA❤️\" and subtitle \"Will you be my Valentine? 💖\", centered on a soft pink gradient background with continuous floating heart animations.",
+        "id": "REQ-15",
+        "summary": "Update Page 1 (main question screen) centered title text to exactly \"❤️ RHUTHUN❤️\" while keeping the rest of the Page 1 layout/behavior the same (soft pink gradient background, floating hearts, question text, single \"Yes! 💕\" button, and teasing bubbles behavior).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/QuestionScreen.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/QuestionScreen.tsx"
         ],
         "matchedFiles": [
           "frontend/src/components/QuestionScreen.tsx"
         ]
       },
       {
-        "id": "REQ-2",
-        "summary": "Implement the Page 1 interaction so there is no \"No\" button and the only visible CTA is a main pink button labeled \"Yes! 💕\" that remains attractive and easy to click (not obstructed by teasing bubbles).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/QuestionScreen.tsx",
-          "frontend/src/components/TeasingMessage.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/QuestionScreen.tsx",
-          "frontend/src/components/TeasingMessage.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Revise the teasing message behavior on Page 1 to feel like viral reels: show chat-style floating bubbles that appear one at a time near the cursor when the user hesitates (idle) or clicks/taps elsewhere; each bubble uses one of the provided messages, chosen randomly, and appears with a playful random rotation and smooth enter/exit animation.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/QuestionScreen.tsx",
-          "frontend/src/components/TeasingMessage.tsx",
-          "frontend/src/index.css"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/QuestionScreen.tsx",
-          "frontend/src/components/TeasingMessage.tsx",
-          "frontend/src/index.css"
-        ]
-      },
-      {
-        "id": "REQ-4",
-        "summary": "On clicking \"Yes! 💕\", transition from Page 1 to Page 2 with a soft fade plus a heart-burst effect.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/ValentineScreen.tsx",
-          "frontend/src/components/HeartBurst.tsx",
-          "frontend/src/index.css"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/ValentineScreen.tsx",
-          "frontend/src/index.css"
-        ]
-      },
-      {
-        "id": "REQ-5",
-        "summary": "Build Page 2 content to match the requested celebration layout and copy: show \"🎉 Yay! 🎉\" and \"I knew you'd say yes! 💞\", then a rounded photo frame containing a romantic couple silhouette placeholder image, followed by the text \"You've made me the happiest! 💖\"; include the footer text \"© 2025 · Built with ❤️ using caffeine.ai\".",
+        "id": "REQ-16",
+        "summary": "Ensure Page 2 (after clicking \"Yes! 💕\") footer text matches the spec exactly as plain text: \"© 2025 · Built with ❤️ using caffeine.ai\" (no dynamic year, no link), and remove any extra footer text on Page 1 that is not specified in the request.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CelebrationScreen.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/CelebrationScreen.tsx"
-        ]
-      },
-      {
-        "id": "REQ-6",
-        "summary": "Ensure the overall visual style is consistently romantic, cute, and smooth with reel-like motion polish (hearts, fades, bubble animations), while keeping the experience responsive and touch-friendly.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/FloatingHearts.tsx",
-          "frontend/src/components/QuestionScreen.tsx",
-          "frontend/src/index.css"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/QuestionScreen.tsx",
-          "frontend/src/index.css"
-        ]
-      },
-      {
-        "id": "REQ-7",
-        "summary": "Add the required static placeholder image asset and reference it from the frontend via the public assets path so it renders in Page 2’s rounded photo frame.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png",
-          "frontend/src/components/CelebrationScreen.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png",
           "frontend/src/components/CelebrationScreen.tsx"
         ]
       }
@@ -106,24 +36,11 @@
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/Dockerfile",
-    "build-template/LICENSE",
-    "build-template/README.md",
-    "build-template/deploy.sh",
-    "build-template/icp.yaml",
-    "build-template/src/backend/canister.yaml",
-    "build-template/src/frontend/canister.yaml",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png",
     "frontend/src/components/CelebrationScreen.tsx",
     "frontend/src/components/QuestionScreen.tsx",
-    "frontend/src/components/TeasingMessage.tsx",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/index.css",
-    "frontend/src/pages/ValentineScreen.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

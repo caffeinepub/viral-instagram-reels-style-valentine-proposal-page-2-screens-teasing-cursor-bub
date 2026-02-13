@@ -1,15 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Create a 2-screen, Instagram-reels-style Valentine proposal experience with romantic visuals, teasing chat bubbles, and a celebratory “Yes” flow.
+**Goal:** Update the Valentine reel proposal copy to “❤️ RHUTHUN❤️” on Page 1 and ensure the Page 2 footer text matches the spec exactly.
 
 **Planned changes:**
-- Update Page 1 to a soft pink gradient background with continuous floating heart animations and centered text: "❤️ NANDHANA❤️" and "Will you be my Valentine? 💖".
-- Replace Page 1 CTAs with a single primary pink button labeled "Yes! 💕" (no "No" button anywhere), ensuring it stays clickable.
-- Implement reel-like teasing chat bubbles on Page 1 that appear one at a time near the cursor/tap location on idle or off-button clicks, with random message selection, slight random rotation, and smooth enter/exit animation.
-- Add a soft fade transition plus a heart-burst effect when clicking "Yes! 💕" to move from Page 1 to Page 2.
-- Build Page 2 celebration layout and exact copy: "🎉 Yay! 🎉", "I knew you'd say yes! 💞", a rounded photo frame showing the provided romantic silhouette placeholder image, caption "You've made me the happiest! 💖", and footer "© 2025 · Built with ❤️ using caffeine.ai".
-- Ensure overall UI is romantic/cute, animation-polished, responsive, and touch-friendly.
-- Add/reference the static image asset at `frontend/public/assets/generated/romantic-silhouette-placeholder.dim_300x300.png` so it renders in Page 2.
+- Update Page 1 centered title text to exactly: "❤️ RHUTHUN❤️" while keeping the rest of the Page 1 layout and behavior unchanged.
+- Ensure Page 2 footer displays exactly: "© 2025 · Built with ❤️ using caffeine.ai" as plain text (no dynamic year, no link), and remove any extra footer text on Page 1 not specified in the request.
 
-**User-visible outcome:** Users see a romantic proposal Page 1 with floating hearts and playful teasing bubbles, can tap a single "Yes! 💕" button, and then transition via a heart-burst into a celebratory Page 2 with a rounded silhouette image and matching text.
+**User-visible outcome:** Page 1 shows the updated centered title “❤️ RHUTHUN❤️” above the Valentine question and “Yes! 💕” button, and Page 2 shows only the specified plain-text footer line exactly as written.

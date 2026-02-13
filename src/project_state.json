@@ -1,15 +1,18 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Build a viral, Instagram-reels-style interactive Valentine proposal web page with two screens: an initial question screen with playful cursor-following chat bubbles and a second celebration screen after clicking Yes, featuring smooth romantic animations and mobile-friendly design.",
+  "projectStateVersion": 9,
+  "summary": "Build a viral, Instagram-reels-style interactive Valentine proposal web page with soft pink gradient background, floating hearts, centered mobile-first layout. Page 1 shows title \"❤️ RHUTHUN❤️\", the question \"Will you be my Valentine? 💖\", one main pink \"Yes! 💕\" button, and playful chat-style floating teasing bubbles that appear one-at-a-time near the cursor on hesitation or clicks elsewhere (no real No button). On clicking Yes, transition with soft fade + hearts burst to Page 2 showing celebratory copy (\"🎉 Yay! 🎉\", \"I knew you'd say yes! 💞\"), a rounded romantic couple silhouette placeholder image, the text \"You've made me the happiest! 💖\", and footer \"© 2025 · Built with ❤️ using caffeine.ai\"; romantic/cute/smooth reel-like animations throughout.",
   "architectural_notes": [
     "Two-page interactive web flow: initial question screen (no No button) and post-Yes celebration screen with animated transition.",
     "UX behavior: playful rotating chat-bubble messages appear near cursor on hesitation or off-button clicks; keep Yes button prominent/clickable.",
-    "Visual design: soft pink gradient background, floating hearts animation, smooth fade + hearts burst transition, mobile-first layout."
+    "Visual design: soft pink gradient background, floating hearts animation, smooth fade + hearts burst transition, mobile-first layout.",
+    "Add a secondary playful bubble CTA \"Wait… are you sure? 🥺\" (not a real No) that triggers teasing behavior (e.g., gently moving the Yes button or playful animation) without blocking the Yes button.",
+    "Teasing bubble message pool includes these exact lines (random rotation, one at a time): \"Nope, not happening 🙅‍♀️\", \"Still no? Really? 😂\", \"You're testing my patience 😜\", \"You can't escape love 💘\", \"Wait… are you sure? 🥺\".",
+    "Page 2 (after Yes) should use the celebratory content layout: \"🎉 Yay! 🎉\" + \"I knew you'd say yes! 💞\", then rounded couple silhouette placeholder image, then \"You've made me the happiest! 💖\", and footer \"© 2025 · Built with ❤️ using caffeine.ai\".",
+    "Copy updates: Page 1 title must be exactly \"❤️ RHUTHUN❤️\" and question text \"Will you be my Valentine? 💖\"."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Romantic couple silhouette placeholder image, simple high-contrast silhouette on a soft romantic background (romantic-silhouette-placeholder.dim_300x300.png)",
   "existing_features": [
     {
       "id": "feature-update-the-main-question-screen-page-1-copy-and-layout-to-match-title-text-nandhana-and-subtitle-will-you-be-my-valentine-centered-on-a-soft-pink-gradient-background-with-continuous-floating-heart-animations",
@@ -66,12 +69,102 @@
         "REQ-7"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-page-1-copy-to-match-the-latest-spec-set-the-top-title-to-nandhu-and-set-the-main-question-text-to-will-you-be-my-valentine-while-preserving-the-existing-soft-pink-gradient-background-floating-hearts-centered-mobile-first-layout-and-smooth-romantic-animations",
+      "title": "Update Page 1 copy to match the latest spec: set the top title to \"❤️ NANDHU ❤️\" and set the main question text to \"Will you be my Valentine? 💘\" while preserving the existing soft pink gradient background, floating hearts, centered mobile-first layout, and smooth romantic animations.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-visible-secondary-playful-bubble-style-control-on-page-1-labeled-exactly-wait-are-you-sure-this-is-not-a-real-no-option-when-the-user-clicks-taps-this-bubble-trigger-a-playful-teasing-reaction-that-makes-it-impossible-to-reject-e-g-gently-move-animate-the-yes-button-or-run-a-teasing-animation-while-keeping-the-yes-button-easy-to-find-and-click",
+      "title": "Add a visible secondary playful bubble-style control on Page 1 labeled exactly \"Wait… are you sure? 🥺\" (this is not a real 'No' option). When the user clicks/taps this bubble, trigger a playful teasing reaction that makes it impossible to reject (e.g., gently move/animate the \"Yes! 💕\" button or run a teasing animation) while keeping the \"Yes! 💕\" button easy to find and click.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-page-2-celebration-content-with-a-full-screen-sweet-message-screen-shown-after-clicking-yes-the-screen-must-display-the-message-exactly-every-moment-with-you-feels-like-a-dream-come-true-and-include-a-small-footer-text-exactly-made-with-keep-the-existing-soft-fade-heart-burst-transition-into-this-screen-and-maintain-the-same-romantic-smooth-reels-like-vibe",
+      "title": "Replace the current Page 2 celebration content with a full-screen sweet message screen shown after clicking \"Yes! 💕\". The screen must display the message exactly \"Every moment with you feels like a dream come true… ✨\" and include a small footer text exactly \"Made with ❤️\". Keep the existing soft fade + heart-burst transition into this screen and maintain the same romantic, smooth reels-like vibe.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-page-1-copy-to-match-the-spec-exactly-title-text-must-be-nandhu-and-the-question-text-must-be-will-you-be-my-valentine",
+      "title": "Update Page 1 copy to match the spec exactly: title text must be \"❤️ NANDHU ❤️\" and the question text must be \"Will you be my Valentine? 💖\".",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-page-1-has-only-one-visible-primary-cta-button-labeled-exactly-yes-and-there-is-no-real-no-button-or-secondary-control",
+      "title": "Ensure Page 1 has only one visible primary CTA button labeled exactly \"Yes! 💕\" and there is no real \"No\" button or secondary control.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-page-1-teasing-chat-bubble-behavior-show-playful-floating-bubbles-that-appear-one-at-a-time-when-the-user-hesitates-idle-or-clicks-taps-elsewhere-not-on-the-yes-button-each-bubble-must-appear-near-the-cursor-tap-point-use-one-of-the-provided-messages-chosen-randomly-render-with-a-random-rotation-and-animate-smoothly-in-out-without-blocking-the-yes-button-from-being-easy-to-click",
+      "title": "Implement Page 1 teasing chat-bubble behavior: show playful floating bubbles that appear one at a time when the user hesitates (idle) or clicks/taps elsewhere (not on the Yes button). Each bubble must appear near the cursor/tap point, use one of the provided messages chosen randomly, render with a random rotation, and animate smoothly in/out without blocking the Yes button from being easy to click.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-post-yes-screen-with-the-requested-page-2-celebration-layout-and-footer-shown-after-clicking-yes-with-the-existing-soft-fade-heart-burst-transition-display-yay-then-i-knew-you-d-say-yes-then-a-rounded-photo-frame-containing-a-romantic-couple-silhouette-placeholder-image-then-the-text-you-ve-made-me-the-happiest-and-a-small-footer-exactly-2025-built-with-using-caffeine-ai",
+      "title": "Replace the current post-Yes screen with the requested Page 2 celebration layout and footer, shown after clicking \"Yes! 💕\" with the existing soft fade + heart-burst transition: display \"🎉 Yay! 🎉\", then \"I knew you'd say yes! 💞\", then a rounded photo frame containing a romantic couple silhouette placeholder image, then the text \"You've made me the happiest! 💖\", and a small footer exactly \"© 2025 · Built with ❤️ using caffeine.ai\".",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-page-1-main-question-screen-centered-title-text-to-exactly-rhuthun-while-keeping-the-rest-of-the-page-1-layout-behavior-the-same-soft-pink-gradient-background-floating-hearts-question-text-single-yes-button-and-teasing-bubbles-behavior",
+      "title": "Update Page 1 (main question screen) centered title text to exactly \"❤️ RHUTHUN❤️\" while keeping the rest of the Page 1 layout/behavior the same (soft pink gradient background, floating hearts, question text, single \"Yes! 💕\" button, and teasing bubbles behavior).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-page-2-after-clicking-yes-footer-text-matches-the-spec-exactly-as-plain-text-2025-built-with-using-caffeine-ai-no-dynamic-year-no-link-and-remove-any-extra-footer-text-on-page-1-that-is-not-specified-in-the-request",
+      "title": "Ensure Page 2 (after clicking \"Yes! 💕\") footer text matches the spec exactly as plain text: \"© 2025 · Built with ❤️ using caffeine.ai\" (no dynamic year, no link), and remove any extra footer text on Page 1 that is not specified in the request.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Create a 2-page viral Valentine proposal webpage: Page 1 soft pink gradient with floating hearts, centered \"❤️ NANDHANA❤️ Will you be my Valentine? 💖\" and a single \"Yes! 💕\" button; show rotating teasing chat-bubble messages near cursor on hesitation/clicks elsewhere (no real No button). Page 2 appears on Yes with fade + hearts burst transition, celebratory text, rounded placeholder couple silhouette photo frame, follow-up text, and footer © 2025 · Built with ❤️ using caffeine.ai; romantic/cute/smooth animations; mobile-friendly.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update content/behavior to match latest spec: change title to \"❤️ NANDHU ❤️\" and question to \"Will you be my Valentine? 💘\"; add a secondary playful bubble \"Wait… are you sure? 🥺\" (not a real No) that when clicked triggers teasing behavior (e.g., gently move the Yes button or show teasing animation) while still making it impossible to say No; on clicking \"Yes! 💕\" show a full-screen sweet message \"Every moment with you feels like a dream come true… ✨\" and a small footer \"Made with ❤️\"; keep soft pink background, floating hearts, centered mobile-first layout, and smooth romantic/playful reel-like animations.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Align implementation to the (re-stated) reels-style spec: Page 1 uses \"❤️ NANDHU ❤️\" + \"Will you be my Valentine? 💖\" with a single \"Yes! 💕\" button; show teasing chat bubbles near cursor on idle/clicks elsewhere cycling through the provided 5 messages (including \"Wait… are you sure? 🥺\") with random rotation, one-at-a-time; Page 2 is the celebratory layout (\"🎉 Yay! 🎉\", \"I knew you'd say yes! 💞\"), rounded couple silhouette placeholder frame, \"You've made me the happiest! 💖\", and footer \"© 2025 · Built with ❤️ using caffeine.ai\" with soft fade + hearts-burst transition; mobile-friendly romantic/cute smooth animations.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Update the Page 1 centered title text to exactly \"❤️ RHUTHUN❤️\" (replacing prior NANDHU/NANDHANA variants) while keeping the rest of the reels-style two-page Valentine flow the same: soft pink gradient + floating hearts, \"Will you be my Valentine? 💖\", single \"Yes! 💕\" button, cursor-near teasing bubbles rotating through the 5 provided lines, and Page 2 celebration with fade + hearts burst, couple silhouette placeholder frame, \"You've made me the happiest! 💖\", and footer © 2025 · Built with ❤️ using caffeine.ai.",
       "reqIds": [],
       "status": "pending"
     }

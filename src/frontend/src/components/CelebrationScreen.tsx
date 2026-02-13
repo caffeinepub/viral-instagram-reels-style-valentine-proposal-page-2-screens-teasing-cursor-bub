@@ -3,7 +3,7 @@ export default function CelebrationScreen() {
     <div className="flex min-h-screen flex-col items-center justify-center px-6 py-12">
       <main className="flex flex-col items-center justify-center text-center">
         <div className="animate-zoom-in space-y-8">
-          <h1 className="text-5xl font-bold text-rose-700 sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="text-4xl font-bold text-rose-700 sm:text-5xl md:text-6xl">
             🎉 Yay! 🎉
           </h1>
           
@@ -11,15 +11,15 @@ export default function CelebrationScreen() {
             I knew you'd say yes! 💞
           </p>
 
-          <div className="flex flex-col items-center space-y-4 pt-6">
-            <div className="overflow-hidden rounded-full border-4 border-rose-300 shadow-2xl shadow-pink-500/30">
+          <div className="flex flex-col items-center gap-6 pt-6">
+            <div className="overflow-hidden rounded-3xl shadow-2xl">
               <img 
-                src="/assets/generated/romantic-silhouette-placeholder.dim_300x300.png" 
-                alt="Romantic silhouette"
-                className="h-48 w-48 object-cover sm:h-64 sm:w-64"
+                src="/assets/generated/couple-silhouette.dim_800x800.png" 
+                alt="Romantic couple silhouette"
+                className="h-64 w-64 object-cover sm:h-80 sm:w-80 md:h-96 md:w-96"
               />
             </div>
-            
+
             <p className="text-xl font-medium text-rose-600 sm:text-2xl">
               You've made me the happiest! 💖
             </p>
@@ -27,7 +27,7 @@ export default function CelebrationScreen() {
         </div>
       </main>
 
-      <footer className="mt-auto pb-6 text-center text-sm text-rose-500/70">
+      <footer className="mt-auto pb-6 text-center text-xs text-rose-500/70 sm:text-sm">
         © 2025 · Built with ❤️ using caffeine.ai
       </footer>
     </div>

@@ -1,12 +1,13 @@
 {
   "frontend/src/App.tsx": "Main application component with light theme provider and soft pink gradient background with floating hearts animation.",
   "frontend/src/pages/ValentineScreen.tsx": "Container component managing state between question and celebration screens with transition animation (fade + heart burst overlay) when user accepts.",
-  "frontend/src/components/QuestionScreen.tsx": "First screen displaying Valentine question for NANDHANA with \"Yes! 💕\" button, single teasing bubble appearing on tap/click or after idle timeout (3s), with cursor tracking and random rotation.",
-  "frontend/src/components/CelebrationScreen.tsx": "Second screen showing celebration message with rounded photo frame containing romantic silhouette placeholder and footer without link.",
+  "frontend/src/components/QuestionScreen.tsx": "First screen displaying \"❤️ RHUTHUN❤️\" title and \"Will you be my Valentine? 💖\" question with a single \"Yes! 💕\" button, wired with teasing bubble hook that shows playful messages on idle or clicks outside the button, with no footer text.",
+  "frontend/src/components/CelebrationScreen.tsx": "Second screen showing celebration layout with \"🎉 Yay! 🎉\" and \"I knew you'd say yes! 💞\" headings, rounded couple silhouette image from static assets, \"You've made me the happiest! 💖\" message, and footer with static text \"© 2025 · Built with ❤️ using caffeine.ai\" (no link, no dynamic year).",
   "frontend/src/components/FloatingHearts.tsx": "Background animation component that renders continuously floating heart emojis with randomized positions, sizes, and animation timings.",
-  "frontend/src/components/TeasingMessage.tsx": "Chat-style bubble component with rotation support, appearing at specified positions with smooth pop-in/fade-out animation.",
+  "frontend/src/components/TeasingMessage.tsx": "Chat-style bubble component with CSS variable-based rotation support, appearing at specified positions with smooth pop-in/fade-out animation and pointer-events disabled.",
   "frontend/src/components/HeartBurst.tsx": "Animated heart burst effect that radiates hearts outward in a circular pattern when transitioning to celebration screen.",
-  "frontend/src/index.css": "Global styles with OKLCH romantic pink color system and custom keyframe animations including teasing-bubble animation with rotation support.",
+  "frontend/src/index.css": "Global styles with OKLCH romantic pink color system and custom keyframe animations including wiggle animation for playful button interaction.",
   "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens matching the soft pink romantic Valentine theme.",
-  "frontend/src/hooks/useQueries.ts": "Empty file as no backend queries are needed for this frontend-only interactive webpage."
+  "frontend/src/hooks/useQueries.ts": "Empty file as no backend queries are needed for this frontend-only interactive webpage.",
+  "frontend/src/hooks/useTeasingBubbles.ts": "Custom React hook that manages teasing bubble behavior including idle detection, click/tap triggers outside the Yes button, random message selection from five specified strings, random rotation per bubble, and safe positioning that avoids overlapping the Yes button, with proper TypeScript types accepting nullable button refs."
 }
